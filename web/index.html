@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- مهم للهاتف -->
+  <title>✿ موقع الذكريات ✿</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    header {
+      background-color: #ff69b4;
+      color: #fff;
+      padding: 20px;
+      font-size: 28px;
+      animation: fadeSlide 2s ease-out forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* القلب المتحرك */
+    .heart-container {
+      margin: 20px auto;
+      animation: pulse 1.5s infinite;
+      position: relative;
+      width: 100px;
+      height: 90px;
+    }
+
+    .heart {
+      background-color: red;
+      width: 100px;
+      height: 90px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: rotate(-45deg);
+      border-radius: 50% 50% 0 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      background-color: red;
+      border-radius: 50%;
+      width: 100px;
+      height: 90px;
+      position: absolute;
+    }
+
+    .heart::before { top: -50px; left: 0; }
+    .heart::after { top: 0; left: 50px; }
+
+    .love-text {
+      position: absolute;
+      top: 35px;
+      left: 0;
+      width: 100%;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      animation: fadeIn 2s infinite alternate;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.1);}
+      100% {transform: scale(1);}
+    }
+
+    /* أسماء الصديقات */
+    .names {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0;
+      gap: 10px;
+    }
+
+    .box {
+      background-color: #ffcce0;
+      padding: 15px;
+      min-width: 120px;
+      border-radius: 15px;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px #ccc;
+    }
+
+    /* قسم الذكريات */
+    .memories {
+      margin: 40px 0;
+    }
+
+    .memories img,
+    .memories video {
+      max-width: 90%;
+      margin: 15px;
+      border-radius: 10px;
+    }
+
+    /* قسم التعليقات */
+    .comment-box {
+      background: #ffe6f0;
+      padding: 20px;
+      margin: 20px auto;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: right;
+    }
+
+    .comment-box h2 {
+      color: #c2185b;
+      text-align: center;
+    }
+
+    .comment-box input, 
+    .comment-box textarea {
+      width: 95%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 14px;
+    }
+
+    .comment-box button {
+      background-color: #d63384;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .comment-box button:hover {
+      background-color: #a91e63;
+    }
+
+    /* QR code */
+    .qr-section {
+      margin: 30px auto;
+    }
+
+    footer {
+      background: #ff69b4;
+      color: white;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* ميديا كويري للهاتف */
+    @media (max-width: 600px) {
+      header {
+        font-size: 22px;
+        padding: 15px;
+      }
+      .box {
+        font-size: 14px;
+        min-width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>✿ موقع الذكريات ✿</header>
+
+  <!-- قلب متحرك -->
+  <div class="heart-container">
+    <div class="heart"></div>
+    <div class="love-text">حب</div>
+  </div>
+
+  <!-- أسماء الصديقات -->
+  <div class="names">
+    <div class="box">عائشة</div>
+    <div class="box">سارة</div>
+    <div class="box">إيناس</div>
+    <div class="box">سمية</div>
+    <div class="box">رحمة</div>
+    <div class="box">مارية</div>
+    <div class="box">نرجس</div>
+    <div class="box">زهيرة</div>
+    <div class="box">راوية</div>
+    <div class="box">ملاك</div>
+  </div>
+
+  <!-- قسم الذكريات -->
+  <div class="memories">
+    <h2>ذكريات جميلة</h2>
+    <img src="Messenger_creation_1264786541197061.jpeg" alt="ذكريات البيتزا">
+    <video controls>
+      <source src="Messenger_creation_1461549274875009 (1).mp4" type="video/mp4">
+      المتصفح لا يدعم تشغيل الفيديو
+    </video>
+  </div>
+
+  <!-- قسم التعليقات -->
+  <div class="comment-box">
+    <h2>اترك تعليقك ❤️</h2>
+    <form>
+      <label for="name">اسمك:</label><br>
+      <input type="text" id="name" name="name" placeholder="اكتب اسمك"><br>
+      
+      <label for="comment">تعليقك:</label><br>
+      <textarea id="comment" name="comment" rows="4" placeholder="اكتب تعليقك هنا..."></textarea><br>
+      
+      <button type="submit">إرسال التعليق</button>
+    </form>
+  </div>
+
+  <!-- قسم QR -->
+  <div class="qr-section">
+    <h2>زوروا موقع الذكريات عبر QR 📱</h2>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://yourwebsite.com" alt="QR Code">
+  </div>
+
+  <footer>
+    &copy; 2025 ✿ موقع الذكريات ✿
+  </footer>
+
+</body>
+</html>
+
+
+
+
